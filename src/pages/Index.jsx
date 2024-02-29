@@ -3,12 +3,15 @@ import { Box, Button, Container, Flex, Heading, Image, Link, Stack, Text, VStack
 import { FaGlobeAmericas, FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 const Index = () => {
-  const [showInitialText, setShowInitialText] = useState(true);
+  const [contentStage, setContentStage] = useState(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowInitialText(false);
-    }, 5000);
+    const timer =
+      contentStage < 2
+        ? setTimeout(() => {
+            setContentStage((prevStage) => prevStage + 1);
+          }, 5000)
+        : null;
 
     return () => clearTimeout(timer);
   }, []);
@@ -38,7 +41,7 @@ const Index = () => {
           <Container maxW="full" p={0} position="relative">
             <Image src="https://images.unsplash.com/photo-1700718008794-3db41f8d6c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBzaGlwcGluZ3xlbnwwfHx8fDE3MDkxOTUwNTV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Global Shipping" width="100%" objectFit="cover" />
             <Box position="absolute" top="0" right="0" bottom="0" left="0" w="full" display="flex" flexDirection="column" justifyContent="center" alignItems="center" style={{ backdropFilter: "blur(10px)" }}>
-              {showInitialText ? (
+              {contentStage === 0 ? (
                 <>
                   <Heading as="h2" size="3xl" color="white" fontWeight="bold" style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
                     International Freight Forwarding
@@ -47,7 +50,7 @@ const Index = () => {
                     We specialize in the seamless movement of your goods across borders
                   </Text>
                 </>
-              ) : (
+              ) : contentStage === 1 ? (
                 <>
                   <Heading as="h2" size="3xl" color="white" fontWeight="bold" style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
                     Warehousing and Distribution
@@ -56,6 +59,24 @@ const Index = () => {
                     We offer storage and efficient distribution solutions for your goods
                   </Text>
                 </>
+              ) : (
+                <>
+                  <Heading as="h2" size="3xl" color="white" fontWeight="bold" style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
+                    Supply Chain and Management
+                  </Heading>
+                  <Text fontSize="xl" color="white" mt={4} style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
+                    We manage the complete journey of your goods, from sourcing to delivery
+                  </Text>
+                </>
+              )}
+              <>
+                <Heading as="h2" size="3xl" color="white" fontWeight="bold" style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
+                  Warehousing and Distribution
+                </Heading>
+                <Text fontSize="xl" color="white" mt={4} style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
+                  We offer storage and efficient distribution solutions for your goods
+                </Text>
+              </>
               )}
             </Box>
           </Container>
