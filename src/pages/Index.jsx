@@ -25,9 +25,9 @@ const Index = () => {
         {/* Content starts after header padding */}
         <Flex direction="column" align="center" m="auto" textAlign="center" pt="100px">
           {/* Hero Image */}
-          <Box>
-            <Image src="https://images.unsplash.com/photo-1700718008794-3db41f8d6c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBzaGlwcGluZ3xlbnwwfHx8fDE3MDkxOTUwNTV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Global Shipping" boxSize="600px" objectFit="cover" />
-          </Box>
+          <Container maxW="full" p={0}>
+            <Image src="https://images.unsplash.com/photo-1700718008794-3db41f8d6c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBzaGlwcGluZ3xlbnwwfHx8fDE3MDkxOTUwNTV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Global Shipping" width="100%" objectFit="cover" />
+          </Container>
 
           {/* About Section */}
           <VStack spacing={4} p={10} alignItems="flex-start">
