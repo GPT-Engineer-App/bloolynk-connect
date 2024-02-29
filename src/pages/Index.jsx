@@ -27,7 +27,7 @@ const Index = () => {
           {/* Hero Image */}
           <Container maxW="full" p={0} position="relative">
             <Image src="https://images.unsplash.com/photo-1700718008794-3db41f8d6c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBzaGlwcGluZ3xlbnwwfHx8fDE3MDkxOTUwNTV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Global Shipping" width="100%" objectFit="cover" />
-            <Box position="absolute" top="50%" right="0" bottom="0" left="0" transform="translateY(-50%)" w="full" textAlign="center">
+            <Box position="absolute" top="50%" right="0" bottom="0" left="0" transform="translateY(-50%)" w="full" textAlign="center" style={{ backdropFilter: "blur(10px)" }}>
               <Heading as="h2" size="3xl" color={useColorModeValue("gray.800", "white")} fontWeight="bold" style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
                 International Freight Forwarding
               </Heading>
