@@ -7,7 +7,7 @@ const Index = () => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setContentStage((prevStage) => (prevStage + 1) % 3);
+      setContentStage((prevStage) => (prevStage + 1) % 4);
     }, 5000);
 
     return () => {
