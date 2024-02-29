@@ -8,7 +8,7 @@ const Index = () => {
       <Flex direction="column" align="center" m="auto" textAlign="center">
         <Flex as="header" position="fixed" top="0" w="100%" zIndex="sticky" bg={useColorModeValue("gray.100", "gray.900")} shadow="sm">
           <Container maxW="container.xl" p={0}>
-            <Box pt={10} pb={2}>
+            <Box pt={6} pb={2}>
               <Heading as="h1" size="2xl" fontWeight="bold">
                 BlooLynk
               </Heading>
