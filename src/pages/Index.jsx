@@ -31,7 +31,7 @@ const Index = () => {
               <Heading as="h2" size="3xl" color={useColorModeValue("gray.800", "white")} fontWeight="bold" style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
                 International Freight Forwarding
               </Heading>
-              <Text fontSize="xl" color={useColorModeValue("gray.600", "white")} mt={4} style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
+              <Text fontSize="xl" color={useColorModeValue("gray.800", "white")} mt={4} style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
                 We specialize in the seamless movement of your goods across borders
               </Text>
             </Box>
