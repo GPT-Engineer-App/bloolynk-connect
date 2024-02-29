@@ -69,15 +69,6 @@ const Index = () => {
                   </Text>
                 </>
               )}
-              <>
-                <Heading as="h2" size="3xl" color="white" fontWeight="bold" style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
-                  Warehousing and Distribution
-                </Heading>
-                <Text fontSize="xl" color="white" mt={4} style={{ textShadow: "0 0 3px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.2)" }}>
-                  We offer storage and efficient distribution solutions for your goods
-                </Text>
-              </>
-              )}
             </Box>
           </Container>
 
