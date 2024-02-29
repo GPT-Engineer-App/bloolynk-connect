@@ -25,8 +25,9 @@ const Index = () => {
         {/* Content starts after header padding */}
         <Flex direction="column" align="center" m="auto" textAlign="center" pt="100px">
           {/* Hero Image */}
-          <Container maxW="full" p={0}>
+          <Container maxW="full" p={0} position="relative">
             <Image src="https://images.unsplash.com/photo-1700718008794-3db41f8d6c16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBzaGlwcGluZ3xlbnwwfHx8fDE3MDkxOTUwNTV8MA&ixlib=rb-4.0.3&q=80&w=1080" alt="Global Shipping" width="100%" objectFit="cover" />
+            <Box position="absolute" top={0} right={0} bottom={0} left={0} bg="rgba(255, 255, 255, 0.4)" backdropFilter="blur(2px)" />
           </Container>
 
           {/* About Section */}
