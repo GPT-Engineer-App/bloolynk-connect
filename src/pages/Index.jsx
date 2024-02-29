@@ -20,7 +20,7 @@ const Index = () => {
         </Flex>
 
         {/* Adjust padding to account for the fixed header */}
-        <Box pt="100px" />
+        <Box pt="0" />
 
         {/* Content starts after header padding */}
         <Flex direction="column" align="center" m="auto" textAlign="center" pt="100px">
