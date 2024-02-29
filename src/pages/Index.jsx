@@ -6,15 +6,16 @@ const Index = () => {
   const [contentStage, setContentStage] = useState(0);
 
   useEffect(() => {
-    const timer =
-      contentStage < 2
-        ? setTimeout(() => {
-            setContentStage((prevStage) => prevStage + 1);
-          }, 5000)
-        : null;
+    const timer = setTimeout(() => {
+      setContentStage((prevStage) => (prevStage + 1) % 3);
+    }, 5000);
 
-    return () => clearTimeout(timer);
-  }, []);
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+    };
+  }, [contentStage]);
 
   return (
     <Container maxW="container.xl" p={0}>
